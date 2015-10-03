@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5ED86606-486A-443D-9820-6D0152BDBF47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital</RootNamespace>
+    <AssemblyName>Hospital</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dao\DrugCountDAO.cs" />
+    <Compile Include="dao\PatientDAO.cs" />
+    <Compile Include="dao\DoctorDAO.cs" />
+    <Compile Include="dao\DrugDAO.cs" />
+    <Compile Include="dao\PrescDAO.cs" />
+    <Compile Include="pojo\Doctor.cs" />
+    <Compile Include="pojo\DrugCount.cs" />
+    <Compile Include="pojo\Presc.cs" />
+    <Compile Include="pojo\Patient.cs">
+    </Compile>
+    <Compile Include="pojo\Drug.cs" />
+    <Compile Include="ui\PrescUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\PrescUI.Designer.cs">
+      <DependentUpon>PrescUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\SelectDrugUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\SelectDrugUI.Designer.cs">
+      <DependentUpon>SelectDrugUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\DoctorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\DoctorUI.Designer.cs">
+      <DependentUpon>DoctorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\DrugUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\DrugUI.Designer.cs">
+      <DependentUpon>DrugUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\Database.cs" />
+    <Compile Include="ui\HospitalUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\HospitalUI.Designer.cs">
+      <DependentUpon>HospitalUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ui\PrescUI.resx">
+      <DependentUpon>PrescUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\SelectDrugUI.resx">
+      <DependentUpon>SelectDrugUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\DrugUI.resx">
+      <DependentUpon>DrugUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\HospitalUI.resx">
+      <DependentUpon>HospitalUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\PatientUI.resx">
+      <DependentUpon>PatientUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\TreatUI.resx">
+      <DependentUpon>TreatUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\DoctorUI.resx">
+      <DependentUpon>DoctorUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ui\PatientUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\PatientUI.Designer.cs">
+      <DependentUpon>PatientUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\TreatUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\TreatUI.Designer.cs">
+      <DependentUpon>TreatUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
